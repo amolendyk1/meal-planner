@@ -1,46 +1,42 @@
-# Meal Planner Proposal
+What I'm Building
+A client‑side weekly meal planner built with vanilla JavaScript, allowing users to add meals, assign them to days, and view weekly nutrition totals.
 
-## Overview
-I'm building a meal planner that recommends what to eat based on, ingredients I have available, time available for preparation, meals already eaten this week.
+Who It's For / Why
+Primary user: Myself — a busy student who wants a simple way to organize meals.
 
-## Target User & Purpose
-- **For**: Myself (busy student with classes, volleyball, and extracurriculars)
-- **Why**:
-  - Reduce wasted time deciding meals
-  - Avoid discovering missing ingredients too late
-  - Minimize meal repetition throughout the week
+Problems it solves:
 
-## Data Model
-- **State tracking**:
-  - Meal list
-  - Pantry inventory 
-  - Time filter
-  - Meal history
+I forget what meals I planned for the week.
 
-## Core Features
-1. Meal suggestion based on:
-   - Available ingredients
-   - Available time
-   - Recency of meal
-2. Meal management:
-   - Add new meals with:
-     - Required ingredients
-     - Preparation time
-3. Pantry tracking:
-   - Add/remove items
-   - Reset full pantry
-4. Meal history:
-   - Mark meals as eaten with date
-   - Track recent meals
+I want a quick way to track calories and protein.
 
-## Open Questions
-1. Implementation:
-   - How to store and update:
-     - Meal list
-     - Pantry inventory
-     - Meal history
-2. Logic:
-   - How to filter meals based optimally combining:
-     - Multiple ingredients
-     - Time constraints
-     - Recent meal history
+I need a simple place to store recipes and food items.
+
+The State It Tracks
+Recipes (name, calories, protein)
+
+Food items (name, calories, protein)
+
+Weekly planner assignments (breakfast/lunch/dinner for each day)
+
+Computed totals (weekly calories + weekly protein)
+
+Core Features
+Add recipes and food items to a shared meal library
+
+Assign meals to breakfast/lunch/dinner slots
+
+Modal meal picker for selecting meals
+
+Automatic weekly nutrition summary
+
+Reset button that clears all data without refreshing the page
+
+What I Don’t Know Yet
+How to structure and persist state in localStorage
+
+How to compute derived nutrition totals
+
+How to manage modal interactions and dynamic DOM updates
+
+How to organize JavaScript code for multiple views

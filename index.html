@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Planner Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Meal Planner Pro</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="top-nav">
+      <button class="nav-link active" data-view="planner">
+        Weekly Planner
+      </button>
+      <button class="nav-link" data-view="library">Meal Library</button>
+      <button class="nav-link" data-view="nutrition">Nutrition</button>
+      <button id="reset-app" class="danger-btn">Reset</button>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <!-- WEEKLY PLANNER -->
+      <section id="view-planner" class="app-view active">
+        <div class="card">
+          <h2>Weekly Planner</h2>
+          <div id="planner-grid"></div>
+        </div>
+      </section>
+
+      <!-- MEAL LIBRARY (recipes + food items combined) -->
+      <section id="view-library" class="app-view">
+        <div class="card">
+          <h2>Add Recipe</h2>
+          <form id="recipe-form">
+            <input id="recipe-name" placeholder="Recipe name" required />
+            <input
+              id="recipe-calories"
+              type="number"
+              placeholder="Calories"
+              required
+            />
+            <input
+              id="recipe-protein"
+              type="number"
+              placeholder="Protein (g)"
+              required
+            />
+            <button type="submit">Add Recipe</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Add Food Item</h2>
+          <form id="food-form">
+            <input id="food-name" placeholder="Food name" required />
+            <input
+              id="food-calories"
+              type="number"
+              placeholder="Calories"
+              required
+            />
+            <input
+              id="food-protein"
+              type="number"
+              placeholder="Protein (g)"
+              required
+            />
+            <button type="submit">Add Food</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Meal Library</h2>
+          <div id="meal-library"></div>
+        </div>
+      </section>
+
+      <!-- NUTRITION -->
+      <section id="view-nutrition" class="app-view">
+        <div class="card">
+          <h2>Weekly Nutrition</h2>
+          <div id="nutrition-summary"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL MEAL PICKER -->
+    <div id="meal-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Select a Meal</h3>
+        <div id="modal-items"></div>
+        <button id="close-modal" class="danger-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-box">
+        <p>Meal Planner Pro © 2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

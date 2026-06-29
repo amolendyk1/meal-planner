@@ -1,58 +1,140 @@
-# Meal Planner - Product Requirements Document
+1. Overview
+Meal Planner Pro is a vanilla JavaScript weekly meal planning tool that runs entirely in the browser. Users can add meals, assign them to days, and view weekly nutrition totals. All data is stored in localStorage.
 
-## Overview
-A meal planning application that suggests meals based on available ingredients, time constraints, and meal history.
+2. Goals
+Provide a simple weekly meal planning interface
 
-## Target Users
-- Busy students/professionals
-- People wanting to reduce food waste
-- Those seeking meal variety
+Track calories and protein across the week
 
-## Core Features & Requirements
+Store recipes and food items in one place
 
-### 1. Meal Suggestions
-- **Priority**: High
-- **Description**: Recommends meals based on:
-  - Available ingredients
-  - Available preparation time
-  - Recent meal history (avoid repetition)
-- **Acceptance Criteria**:
-  - Must filter out meals requiring unavailable ingredients
-  - Must prioritize meals that haven't been eaten recently
-  - Must sort meals by preparation time when time filter is active
+Keep the app lightweight, offline‑friendly, and fast
 
-### 2. Meal Management
-- **Priority**: High
-- **Description**: CRUD operations for meals
-- **Fields per meal**:
-  - Name
-  - Ingredients list
-  - Preparation time
-  - Instructions
-  - Tags (quick, vegetarian, etc.)
+3. Target User
+Primary user: A busy student who wants a simple, fast meal‑planning workflow.
 
-### 3. Pantry Tracking
-- **Priority**: Medium
-- **Description**: Track available ingredients
-- **Functions**:
-  - Add/remove items
-  - Bulk reset pantry
-  - Shopping list generation
+User needs:
 
-### 4. Meal History
-- **Priority**: Medium
-- **Description**: Track consumed meals
-- **Functions**:
-  - Log meals with date
-  - View weekly/monthly meal patterns
+A visual weekly planner
 
-### Technical Requirements
-- **Frontend**: React.js
-- **Backend**: Node.js/Express
-- **Database**: SQLite (local), MongoDB (cloud option)
-- **Responsive Design**: Mobile-first approach
+A basic nutrition summary
 
-### Future Considerations
-- Recipe import functionality
-- Nutritional tracking
-- Shopping list integration with grocery apps
+A unified meal library
+
+A tool that works offline
+
+4. Core Features
+4.1 Meal Library
+Add recipes and food items
+
+Store name, calories, protein
+
+Display all meals in a combined list
+
+Persist in localStorage
+
+4.2 Weekly Planner
+Seven‑day grid (Mon–Sun)
+
+Three meal slots per day
+
+Each slot shows assigned meal + nutrition
+
+Planner saved in localStorage
+
+4.3 Modal Meal Picker
+Opens when user clicks “Add”
+
+Shows all meals from the library
+
+Selecting a meal assigns it to the chosen slot
+
+4.4 Nutrition Summary
+Computes weekly totals for calories + protein
+
+Updates automatically when planner changes
+
+4.5 Reset System
+Clears recipes, food items, and planner
+
+Re-renders UI without refreshing
+
+5. State Management
+js
+state = {
+  recipes: [],
+  food: [],
+  planner: {},
+  totalCalories: 0,
+  totalProtein: 0
+}
+Persistence
+Saved under "mealPlannerPro" in localStorage
+
+Loaded on startup
+
+Derived State
+Weekly calories
+
+Weekly protein
+
+6. User Interactions
+Form submissions (add recipe, add food item)
+
+Navigation buttons
+
+Add meal buttons
+
+Modal selection
+
+Reset button
+
+Dynamic DOM updates
+
+7. Technical Requirements
+Vanilla JavaScript only
+
+No backend
+
+No external APIs
+
+No frameworks or libraries
+
+Must run on GitHub Pages
+
+Semantic HTML
+
+Intentional CSS styling
+
+Responsive grid layout
+
+8. Non‑Functional Requirements
+Performance: Instant load, fast DOM updates
+
+Reliability: State persists across refreshes
+
+Usability: Clear navigation, simple forms
+
+Accessibility: High contrast, large buttons
+
+9. Open Questions
+Should meals be removable?
+
+Should planner support snacks?
+
+Should nutrition include more macros?
+
+Should weeks be duplicable?
+
+10. Future Enhancements (Not in MVP)
+Drag‑and‑drop meal assignment
+
+Portion multipliers
+
+Grocery list generation
+
+Pantry inventory
+
+Meal tags
+
+Dark mode
