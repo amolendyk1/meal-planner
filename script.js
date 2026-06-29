@@ -39,17 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* RESET */
-  $("#reset-app").addEventListener("click", () => {
-    if (confirm("Reset all data?")) {
-      state.recipes = [];
-      state.pantry = [];
-      state.planner = {};
-      state.totalCalories = 0;
-      state.totalProtein = 0;
-      saveState();
-      renderAll();
-    }
-  });
+$("#reset-app").addEventListener("click", () => {
+  if (confirm("Reset weekly schedule?")) {
+    state.planner = {};        // Clear only the weekly planner
+    state.totalCalories = 0;   // Reset nutrition totals
+    state.totalProtein = 0;
+
+    saveState();
+    renderPlannerAssignments(); // Re-render planner + nutrition
+  }
+});
 
   /* ------------------------------
      ADD RECIPE (MEAL LIBRARY)
