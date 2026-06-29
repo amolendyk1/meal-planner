@@ -1,42 +1,44 @@
-What I'm Building
-A client‑side weekly meal planner built with vanilla JavaScript, allowing users to add meals, assign them to days, and view weekly nutrition totals.
+# What I'm Building
+A client-side weekly meal planner allowing users to add meals, assign them to days, view weekly nutrition totals.
 
-Who It's For / Why
-Primary user: Myself — a busy student who wants a simple way to organize meals.
+## Who It's For / Why
 
-Problems it solves:
+**Primary user:** Myself — a busy student who wants a simple way to organize meals.
 
-I forget what meals I planned for the week.
+### Problems it solves:
 
-I want a quick way to track calories and protein.
+- I forget what meals I planned for the week
+- I want a quick way to track calories and protein
+- I need a simple place to store recipes and food items
 
-I need a simple place to store recipes and food items.
+## The State It Tracks
 
-The State It Tracks
-Recipes (name, calories, protein)
+- **Recipes**
+  - Name
+  - Calories
+  - Protein
 
-Food items (name, calories, protein)
+- **Food items**
+  - Name
+  - Calories
+  - Protein
 
-Weekly planner assignments (breakfast/lunch/dinner for each day)
+- **Weekly planner assignments**
+  - Breakfast/Lunch/Dinner for each day
 
-Computed totals (weekly calories + weekly protein)
+- **Computed totals**
+  - Weekly calories
+  - Weekly protein
 
-Core Features
-Add recipes and food items to a shared meal library
+## Core Features
+- Add recipes and food items to a shared meal library
+- Assign meals to breakfast/lunch/dinner slots
+- Modal meal picker for selecting meals
+- Automatic weekly nutrition summary
+- Reset button that clears all data without refreshing the page
 
-Assign meals to breakfast/lunch/dinner slots
-
-Modal meal picker for selecting meals
-
-Automatic weekly nutrition summary
-
-Reset button that clears all data without refreshing the page
-
-What I Don’t Know Yet
-How to structure and persist state in localStorage
-
-How to compute derived nutrition totals
-
-How to manage modal interactions and dynamic DOM updates
-
-How to organize JavaScript code for multiple views
+## What I Don’t Know Yet
+- How to structure and persist state in localStorage
+- How to compute derived nutrition totals
+- How to manage modal interactions and dynamic DOM updates
+- How to organize JavaScript code for multiple views

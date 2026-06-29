@@ -1,140 +1,86 @@
-1. Overview
-Meal Planner Pro is a vanilla JavaScript weekly meal planning tool that runs entirely in the browser. Users can add meals, assign them to days, and view weekly nutrition totals. All data is stored in localStorage.
+# 1. Overview
 
-2. Goals
-Provide a simple weekly meal planning interface
+Meal Planner Pro is a vanilla JavaScript weekly meal planning tool that runs entirely in the browser.
+- Users can add meals, assign them to days, and view weekly nutrition totals
+- All data is stored in localStorage
 
-Track calories and protein across the week
+# 2. Goals
 
-Store recipes and food items in one place
+- Provide a simple weekly meal planning interface
+- Track calories and protein across the week
+- Store recipes and food items in one place
+- Keep the app lightweight, offline-friendly, and fast
 
-Keep the app lightweight, offline‑friendly, and fast
+# 3. Target User
 
-3. Target User
-Primary user: A busy student who wants a simple, fast meal‑planning workflow.
+**Primary user:** A busy student who wants a simple, fast meal-planning workflow.
 
-User needs:
+**User needs:**
+- A visual weekly planner
+- A basic nutrition summary
+- A unified meal library
+- A tool that works offline
 
-A visual weekly planner
+# 4. Core Features
 
-A basic nutrition summary
+## 4.1 Meal Library
 
-A unified meal library
+- Add recipes and food items
+- Store:
+  - Name
+  - Calories
+  - Protein
+- Display all meals in a combined list
+- Persist in localStorage
 
-A tool that works offline
+## 4.2 Weekly Planner
 
-4. Core Features
-4.1 Meal Library
-Add recipes and food items
+- Seven-day grid (Mon–Sun)
+- Three meal slots per day:
+  - Each slot shows:
+    - Assigned meal
+    - Nutrition information
+- Planner saved in localStorage
 
-Store name, calories, protein
+## 4.3 Modal Meal Picker
 
-Display all meals in a combined list
+- Opens when user clicks "Add"
+- Shows all meals from the library
+- Selecting a meal assigns it to the chosen slot
 
-Persist in localStorage
+## 4.4 Nutrition Summary
+- Computes weekly totals for calories + protein
+- Updates automatically when planner changes
 
-4.2 Weekly Planner
-Seven‑day grid (Mon–Sun)
+## 4.5 Reset System
+- Clears recipes, food items, and planner
+- Re-renders UI without refreshing
 
-Three meal slots per day
 
-Each slot shows assigned meal + nutrition
+# 5. User Interactions
+- Form submissions (add recipe, add food item)
+- Navigation buttons
+- Add meal buttons
+- Modal selection
+- Reset button
+- Dynamic DOM updates
 
-Planner saved in localStorage
 
-4.3 Modal Meal Picker
-Opens when user clicks “Add”
+## 6. Non‑Functional Requirements
+- Performance: Instant load, fast DOM updates
+- Reliability: State persists across refreshes
+- Usability: Clear navigation, simple forms
+- Accessibility: High contrast, large buttons
 
-Shows all meals from the library
+## 7. Open Questions
+- Should meals be removable?
+- Should planner support snacks?
+- Should nutrition include more macros?
+- Should weeks be duplicable?
 
-Selecting a meal assigns it to the chosen slot
-
-4.4 Nutrition Summary
-Computes weekly totals for calories + protein
-
-Updates automatically when planner changes
-
-4.5 Reset System
-Clears recipes, food items, and planner
-
-Re-renders UI without refreshing
-
-5. State Management
-js
-state = {
-  recipes: [],
-  food: [],
-  planner: {},
-  totalCalories: 0,
-  totalProtein: 0
-}
-Persistence
-Saved under "mealPlannerPro" in localStorage
-
-Loaded on startup
-
-Derived State
-Weekly calories
-
-Weekly protein
-
-6. User Interactions
-Form submissions (add recipe, add food item)
-
-Navigation buttons
-
-Add meal buttons
-
-Modal selection
-
-Reset button
-
-Dynamic DOM updates
-
-7. Technical Requirements
-Vanilla JavaScript only
-
-No backend
-
-No external APIs
-
-No frameworks or libraries
-
-Must run on GitHub Pages
-
-Semantic HTML
-
-Intentional CSS styling
-
-Responsive grid layout
-
-8. Non‑Functional Requirements
-Performance: Instant load, fast DOM updates
-
-Reliability: State persists across refreshes
-
-Usability: Clear navigation, simple forms
-
-Accessibility: High contrast, large buttons
-
-9. Open Questions
-Should meals be removable?
-
-Should planner support snacks?
-
-Should nutrition include more macros?
-
-Should weeks be duplicable?
-
-10. Future Enhancements (Not in MVP)
-Drag‑and‑drop meal assignment
-
-Portion multipliers
-
-Grocery list generation
-
-Pantry inventory
-
-Meal tags
-
-Dark mode
+## 8.  Future Enhancements 
+- Drag‑and‑drop meal assignment
+- Portion multipliers
+- Grocery list generation
+- Meal tags
+- Dark mode

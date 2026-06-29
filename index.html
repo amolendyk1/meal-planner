@@ -15,10 +15,9 @@
 
     <!-- NAVIGATION -->
     <nav class="top-nav">
-      <button class="nav-link active" data-view="planner">
-        Weekly Planner
-      </button>
+      <button class="nav-link active" data-view="planner">Weekly Planner</button>
       <button class="nav-link" data-view="library">Meal Library</button>
+      <button class="nav-link" data-view="pantry">Pantry</button>
       <button class="nav-link" data-view="nutrition">Nutrition</button>
       <button id="reset-app" class="danger-btn">Reset</button>
     </nav>
@@ -33,51 +32,38 @@
         </div>
       </section>
 
-      <!-- MEAL LIBRARY (recipes + food items combined) -->
+      <!-- MEAL LIBRARY -->
       <section id="view-library" class="app-view">
         <div class="card">
           <h2>Add Recipe</h2>
           <form id="recipe-form">
             <input id="recipe-name" placeholder="Recipe name" required />
-            <input
-              id="recipe-calories"
-              type="number"
-              placeholder="Calories"
-              required
-            />
-            <input
-              id="recipe-protein"
-              type="number"
-              placeholder="Protein (g)"
-              required
-            />
+            <input id="recipe-calories" type="number" placeholder="Calories" required />
+            <input id="recipe-protein" type="number" placeholder="Protein (g)" required />
             <button type="submit">Add Recipe</button>
-          </form>
-        </div>
-
-        <div class="card">
-          <h2>Add Food Item</h2>
-          <form id="food-form">
-            <input id="food-name" placeholder="Food name" required />
-            <input
-              id="food-calories"
-              type="number"
-              placeholder="Calories"
-              required
-            />
-            <input
-              id="food-protein"
-              type="number"
-              placeholder="Protein (g)"
-              required
-            />
-            <button type="submit">Add Food</button>
           </form>
         </div>
 
         <div class="card">
           <h2>Meal Library</h2>
           <div id="meal-library"></div>
+        </div>
+      </section>
+
+      <!-- PANTRY -->
+      <section id="view-pantry" class="app-view">
+        <div class="card">
+          <h2>Add Pantry Item</h2>
+          <form id="pantry-form">
+            <input id="pantry-name" placeholder="Food name" required />
+            <input id="pantry-qty" placeholder="Quantity" required />
+            <button type="submit">Add to Pantry</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Pantry</h2>
+          <div id="pantry-list"></div>
         </div>
       </section>
 
